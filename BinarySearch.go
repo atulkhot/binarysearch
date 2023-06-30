@@ -75,24 +75,22 @@ func binary_search(values []int, target int) (index, num_tests int) {
 }
 
 func main() {
-	//var num_items, max, target int
-	//fmt.Printf("# Items: ")
-	//fmt.Scanln(&num_items)
-	//fmt.Printf("Max: ")
-	//fmt.Scanln(&max)
+	var num_items, max, target int
+	fmt.Printf("# Items: ")
+	fmt.Scanln(&num_items)
+	fmt.Printf("Max: ")
+	fmt.Scanln(&max)
 
 	// Make and display the unsorted slice.
-	values := []int{10, 1, 6, 7, 15} // make_random_slice(num_items, max)
+	values := make_random_slice(num_items, max)
 
 	quicksort(values)
 
 	print_slice(values, len(values))
 	fmt.Println()
 
-	//fmt.Printf("Target: ")
-	//fmt.Scanln(&target)
-
-	target := 14
+	fmt.Printf("Target: ")
+	fmt.Scanln(&target)
 
 	i, v := binary_search(values, target)
 
